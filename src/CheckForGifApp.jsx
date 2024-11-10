@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { AddCategory, GifGrid } from './components';
+import PropTypes from 'prop-types';
+
 
 export const CheckForGifApp = () => {
     
@@ -35,3 +37,5 @@ export const CheckForGifApp = () => {
         </>
     )
 }
+CheckForGifApp.propTypes = { initialCategories: PropTypes.arrayOf(PropTypes.string) };
+CheckForGifApp.defaultProps = { initialCategories: ['Messi'] };
